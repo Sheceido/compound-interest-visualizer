@@ -10,14 +10,11 @@ inquireBtn.addEventListener('click', ()=> {
 });
 
 const closeModalBtn = document.querySelector('.closeModalBtn');
-closeModalBtn.addEventListener('click', closeModal);
-
-
-function closeModal() {
+closeModalBtn.addEventListener('click', () => {
     document.querySelector('dialog').close();
     overlay.style.display = 'none';
     document.body.style.overflowY = 'scroll';
-}
+});
 
 window.onload = function() {
     let calculateBtn = document.querySelector('.calculate');
