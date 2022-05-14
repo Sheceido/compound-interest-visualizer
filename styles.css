@@ -1,257 +1,302 @@
+@charset "UTF-8";
 /* © 2022 Leon Poon. All Rights Reserved. */
 * {
-    margin: none;
-    padding: none;
-    box-sizing: border-box;
+  margin: none;
+  padding: none;
+  box-sizing: border-box;
 }
+
 body {
-    background: url('./assets/tumblr_stars.png');
-    font-family: 'Merriweather Sans', sans-serif;                
+  background: url("./assets/tumblr_stars.png");
+  font-family: "Merriweather Sans", sans-serif;
 }
+
 h3 {
-    /* font-family: 'Cormorant Garamond', serif; */
-    font-size: 1.5rem;
-    text-align: center;
-    width: 110%;
-    padding: 2rem;
-    border-top: 2px solid hsl(269, 17%, 50%);
-    border-radius: 10px 10px 0 0;
-    background: linear-gradient(hsl(224, 100%, 81%), rgb(205, 179, 255));
-    /* background-color: #e9f5df; */
-    margin: 0;
-    user-select: none;
-    transform: translateY(-25px);
-    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.3);
+  /* font-family: 'Cormorant Garamond', serif; */
+  font-size: 1.5rem;
+  text-align: center;
+  width: 110%;
+  padding: 2rem;
+  border-top: 2px solid hsl(269deg, 17%, 50%);
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(hsl(224deg, 100%, 81%), rgb(205, 179, 255));
+  /* background-color: #e9f5df; */
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  transform: translateY(-25px);
+  box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.3);
 }
+
 h4 {
-    user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 .optionForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 500px;
-    min-height: 950px;
-    max-height: 850px;
-    margin: 4rem;
-    padding: 1.5rem;
-    background: linear-gradient(10deg, rgb(28, 34, 117) 10%, hsl(251, 100%, 79%));
-    /* background-color: #f6fbf0; */
-    border: 1px solid hsl(269, 17%, 50%);
-    border-radius: 10px;
-    box-shadow: 0 0 40px hsla(0, 0%, 0%, 0.315);
-    /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 500px;
+  min-height: 950px;
+  max-height: 850px;
+  margin: 4rem;
+  padding: 1.5rem;
+  background: linear-gradient(10deg, rgb(28, 34, 117) 10%, hsl(251deg, 100%, 79%));
+  /* background-color: #f6fbf0; */
+  border: 1px solid hsl(269deg, 17%, 50%);
+  border-radius: 10px;
+  box-shadow: 0 0 40px hsla(0deg, 0%, 0%, 0.315);
+  /* overflow: hidden; */
 }
+
 .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.inputBox{
-    position: relative;
+
+.inputBox {
+  position: relative;
 }
+
 .item-label {
-    font-weight: 900;
-    font-size: small;
-    position: absolute;
-    left: 15px;
-    top: 10px;
-    user-select: none;
+  font-weight: 900;
+  font-size: small;
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
+
 .item-input {
-    margin: 0.5rem;
-    text-align: center;
-    outline: none;
-    border: none;
-    background-color: hsl(0, 0%, 99%);
-    width: 40ch;
-    min-height: 3.5rem;
-    border-radius: 10px;
+  margin: 0.5rem;
+  text-align: center;
+  outline: none;
+  border: none;
+  background-color: hsl(0deg, 0%, 99%);
+  width: 40ch;
+  min-height: 3.5rem;
+  border-radius: 10px;
 }
+
 .item-input:hover, .item-input:focus {
-    background-color: hsl(180, 100%, 96%);
+  background-color: hsl(180deg, 100%, 96%);
 }
+
 .textValue {
-    border-radius: 10px;
-    background-color: hsl(0, 0%, 99%);
-    min-height: 300px;
-    width: 400px;
-    overflow-y: hidden;
-    
+  border-radius: 10px;
+  background-color: hsl(0deg, 0%, 99%);
+  min-height: 300px;
+  width: 400px;
+  overflow-y: hidden;
 }
+
 #compoundTime {
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background-color: hsl(0, 0%, 99%);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: hsl(0deg, 0%, 99%);
 }
+
 #compoundTime:focus, #compoundTime:focus option {
-    background-color: hsl(180, 100%, 96%);
+  background-color: hsl(180deg, 100%, 96%);
 }
+
 .calculate {
-    margin: 1rem;
-    padding: 0.6rem;
-    width: 25ch;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.2);
-    outline: none;
-    border: none;
+  margin: 1rem;
+  padding: 0.6rem;
+  width: 25ch;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px hsla(0deg, 0%, 0%, 0.2);
+  outline: none;
+  border: none;
 }
+
 .calculate:hover, .calculate:focus {
-    background-color: hsl(118, 100%, 85%);
-    box-shadow: 2px 4px 5px hsla(0, 0%, 0%, 0.3);
+  background-color: hsl(118deg, 100%, 85%);
+  box-shadow: 2px 4px 5px hsla(0deg, 0%, 0%, 0.3);
 }
+
 .output {
-    padding: 1rem;
+  padding: 1rem;
 }
+
 .breakdown {
-    display: flex;
-    flex-direction: row;
-    padding: 1rem;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: space-around;
 }
+
 .enumerate {
-    text-align: right;
+  text-align: right;
 }
+
 .compoundValueOutput {
-    text-align: left;
+  text-align: left;
 }
 
 .boxShadowInset {
-    box-shadow: inset 1px 1px 5px hsla(0, 0%, 0%, 0.8);
+  box-shadow: inset 1px 1px 5px hsla(0deg, 0%, 0%, 0.8);
 }
-.chartContainer {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 1.0s ease-in-out;
-    box-shadow: 0 0 10px hsla(0, 0%, 55%, 0.60);
-    border-radius: 10px;
-    margin: 4rem;
-    width: 1000px;
-}
-canvas {
-    background-color: hsla(0, 0%, 100%, 0.849);
-    border-radius: 10px;
-    max-width: 50vw;
-    padding: 2rem;
-}
-.fullOpacity {
-    opacity: 1.0;
-}
-.nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 50px;
-    width: 100%;
-    background: linear-gradient(270deg, hsl(268, 100%, 82%), 10%, hsla(268, 100%, 82%, 0.205));
-    z-index: 10;
-}
-.nav img {
-    position: absolute;
-    right: 0;
-    width: 40px;
-    margin: 0.5rem;
-    transition: all 0.3s ease;
-}
-.nav img:hover {
-    transform: scale(1.1);
-}
-.inquire {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: hsla(189, 100%, 85%, 0.575);
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-}
-.inquire:hover {
-    background-color: hsla(209, 100%, 65%, .40);
-    transform: scale(1.15);
-}
-.overlay {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsla(208, 100%, 82%, 0.623);
-    backdrop-filter: blur(2px);
 
+.chartContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  box-shadow: 0 0 10px hsla(0deg, 0%, 55%, 0.6);
+  border-radius: 10px;
+  margin: 4rem;
+  width: 1000px;
 }
+
+canvas {
+  background-color: hsla(0deg, 0%, 100%, 0.849);
+  border-radius: 10px;
+  max-width: 50vw;
+  padding: 2rem;
+}
+
+.fullOpacity {
+  opacity: 1;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(270deg, hsl(268deg, 100%, 82%), 10%, hsla(268deg, 100%, 82%, 0.205));
+  z-index: 10;
+}
+
+.nav img {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav img:hover {
+  transform: scale(1.1);
+}
+
+.inquire {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: hsla(189deg, 100%, 85%, 0.575);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.inquire:hover {
+  background-color: hsla(209deg, 100%, 65%, 0.4);
+  transform: scale(1.15);
+}
+
+.overlay {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsla(208deg, 100%, 82%, 0.623);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
 .modal {
-    position: fixed;
-    z-index: 1000;
-    max-width: 80%;
-    background-color: hsla(38, 73%, 97%, 0.863);
-    border: 3px double black;
+  position: fixed;
+  z-index: 1000;
+  max-width: 80%;
+  background-color: hsla(38deg, 73%, 97%, 0.863);
+  border: 3px double black;
 }
+
 .closeModalBtn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-weight: 900;
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: 900;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
-    html {
-        overflow-x: hidden;
-    }
-    body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-    .container {
-        position: relative;
-        display: grid;
-    }
-    .optionForm {
-        transform: scale(0.9);
-    }
-    .chartContainer {
-        margin: 0;
-        padding: 0;
-        width: 90%;
-    }
-    canvas {
-        margin: 0;
-        padding: 0;
-    }
-    h4 {
-        font-size: x-small;
-    }
+  html {
+    overflow-x: hidden;
+  }
 
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .container {
+    position: relative;
+    display: grid;
+  }
+
+  .optionForm {
+    transform: scale(0.9);
+  }
+
+  .chartContainer {
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+
+  canvas {
+    margin: 0;
+    padding: 0;
+  }
+
+  h4 {
+    font-size: x-small;
+  }
 }
 @media screen and (max-width: 400px) {
-    .optionForm {
-        transform: scale(0.6) translateY(-30%);
-    }
-    .chartContainer {
-        transform: translateY(-90%);
-        margin: 0rem;
-    }
-}
+  .optionForm {
+    transform: scale(0.6) translateY(-30%);
+  }
+
+  .chartContainer {
+    transform: translateY(-90%);
+    margin: 0rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
