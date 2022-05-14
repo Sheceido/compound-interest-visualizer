@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- © 2022 Leon Poon. All Rights Reserved. -->
+<html>
+    <head>
+        <title>Compound Interest Visualizer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js" defer></script>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Merriweather+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav">
+            <a href="https://github.com/Sheceido" target="_blank"><img src="./assets/GitHub-Mark-120px-plus.png" alt="github profile"></a>
+        </div>
+        <div class="container">
+            <div class="inquire"><img src="./assets/question-mark-button.svg" alt="inquire about page">
+            </div>
+            <div class="overlay">
+                <dialog class="modal">
+                    <button class="closeModalBtn">X</button>
+                    <div class="modalText">
+                        <p>Simply enter the parameters needed to calculate the future value (FV) from the present value (PV) investment.
+                            No personal information is saved within these pages - closing the webpage or refreshing will clear inputs.</p>
+                        <p>The future value compound interest formula is as follows: <br><br>
+                            <a href="https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php" target="_blank" style="text-decoration: none;">
+                                <b>A = P * ( 1 + <sup>r</sup>/<sub>n</sub> )<sup>n<i>t</i></sup></b></a> <br><br>
+                            A = Final amount <br>
+                            P = initial principal amount <br>
+                            r = interest rate (in decimal) <br>
+                            n = compounding intervals within a time period<br>
+                            <i>t</i> = number of time periods elapsed <br>
+                        </p>
+                        <p>This formula allows the user to quickly arrive at the final accrued amount, but through simple programmatic
+                            iterations, this mini-application can also break down the steps of every compounding interval, then display on
+                            a line graph.
+                        </p>
+                        <p>It should be noted that with contributions, the app assumes an equal distribution within the year ( <sup>yearly contribution</sup> / <sub>12</sub> ),
+                            and are added to the growing equity prior to the interval compounding.</p>
+                        <p>(Example: if monthly contributions are $100, and the compounding intervals
+                            are quarterly, $300 will be added to the present value before the interval interest rate is applied.)</p>
+                    </div>
+                </dialog>
+            </div>
+            <div class="optionForm">
+                <h3>Compound Interest Visualizer</h3>
+                <div class="form">
+                    <div>
+                        <div class="inputBox">
+                            <label class="item-label" for="compoundTime">Compounding Intervals:</label>
+                            <select class="item-input boxShadowInset" id="compoundTime">
+                                <option selected="true" disabled>--Select compounding period--</option>
+                                <option value="annual">Annual</option>
+                                <option value="biannual">Biannual</option>
+                                <option value="quarterly">Quarterly</option>
+                                <option value="monthly">Monthly</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <label class="item-label" for="presentValue">Present Value ($):</label>
+                            <input class="item-input boxShadowInset" name="presentValue" id="presentValue" type="number" required>
+                        </div>
+                        <div class="inputBox">
+                            <label class="item-label" for="interest">Interest (%):</label>
+                            <input class="item-input boxShadowInset" name="interest" id="interest" type="number" step="0.1" required>
+                        </div>
+                        <div class="inputBox">
+                            <label class="item-label" for="years">Years:</label>
+                            <input class="item-input boxShadowInset" name="years" id="years" type="number" required>
+                        </div>
+                        <div class="inputBox">
+                            <label class="item-label" for="contribution">Contribution per Year ($)</label>
+                            <input class="item-input boxShadowInset" name="contribution" id="contribution" type="number" placeholder="0">
+                        </div>
+                    </div>
+                    <button class="calculate" disabled>Calculate and Graph</button>
+                </div>
+                <div class="textValue boxShadowInset">
+                    <p class="output"></p>
+                    <div class="breakdown">
+                        <div class="enumerate"></div>
+                        <div class="compoundValueOutput"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="chartContainer">
+                <canvas id="compoundInterestChart" class="">Chart for compound interest</canvas>
+            </div>
+        </div>
+        <footer>
+            <p>© 2022 Leon Poon. All Rights Reserved.</p>
+        </footer>
+    </body>
+</html>
